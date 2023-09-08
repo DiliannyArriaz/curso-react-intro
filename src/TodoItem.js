@@ -1,5 +1,6 @@
 import './css/TodoItem.css';
 import checklogo from './css/icons8-comprobado-32.png'
+import closelogo from './css/icons8-x-50.png'
 
 function TodoItem(props) {
   return (
@@ -11,7 +12,7 @@ function TodoItem(props) {
         {props.text}
       </p>
       <span className="Icon Icon-delete">
-        X
+        <img src={ closelogo } alt='closelogo' className='closelogo'></img>
       </span>
     </li>
   );

@@ -67,3 +67,8 @@
 .checklogo {
   filter: invert(100%)
 }
+
+.closelogo {
+  width: 30px;
+  filter: invert(100%);
+}
