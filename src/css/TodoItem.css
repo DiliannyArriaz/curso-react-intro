@@ -1,5 +1,5 @@
 .TodoItem {
-  background-color: #6DA999; 
+  background-color: #6DA999;
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
@@ -14,7 +14,9 @@
   color: #f5f4f4;
   flex: 1;
   margin-right: 10px;
+
 }
+
 .TodoItem-p--complete {
   text-decoration: line-through;
 }
@@ -28,12 +30,11 @@
   width: 48px;
   font-size: 24px;
   font-weight: bold;
-  /* background-color: #CCC; */
 }
 
 .Icon-check {
-  background-color: #2B3B5F; /* Rosa Flor */
-  color: #FFF; /* Texto en blanco */
+  background-color: #2B3B5F;
+  color: #FFF;
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
@@ -42,7 +43,7 @@
 }
 
 .Icon-check:hover {
-  background-color: #81cab3; /* Rosa Flor con un tono más claro */
+  background-color: #81cab3;
 }
 
 .Icon-check--active {
@@ -50,14 +51,19 @@
 }
 
 .Icon-delete {
-  background-color: #2B3B5F; /* Rosa Flor */
-  color: #FFF; /* Texto en blanco */
+  background-color: #2B3B5F;
+  color: #FFF;
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
   transition: background-color 0.2s;
 }
+
 .Icon-delete:hover {
-  background-color: #81cab3; /* Rosa Flor con un tono más claro */
+  background-color: #81cab3;
+}
+
+.checklogo {
+  filter: invert(100%)
 }
