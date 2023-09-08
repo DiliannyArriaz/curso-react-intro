@@ -1,5 +1,10 @@
+/* Estilo para el contenedor de la lista ToDo */
 .TodoList {
-  margin: 0;
-  padding: 0 0 56px 0;
-  list-style: none;
+  /* background-color: #EADECE;  */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(150, 149, 149, 0.397);
+  padding: 20px;
+  max-width: 600px; /* Ajusta el ancho máximo según tus preferencias */
+  margin: 0 auto; /* Centrar la lista en la pantalla */
+  font-family: Arial, sans-serif; /* Establece la fuente que prefieras */
 }
