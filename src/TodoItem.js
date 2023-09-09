@@ -1,6 +1,6 @@
 import './css/TodoItem.css';
-import checklogo from './css/icons8-comprobado-32.png'
-import closelogo from './css/icons8-x-50.png'
+import checklogo from './media/icons8-comprobado-32.png'
+import closelogo from './media/icons8-x-50.png'
 
 function TodoItem(props) {
   return (
