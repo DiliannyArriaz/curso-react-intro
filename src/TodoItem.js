@@ -1,18 +1,25 @@
+
 import './css/TodoItem.css';
-import checklogo from './media/icons8-comprobado-32.png'
-import closelogo from './media/icons8-x-50.png'
+import { FiCheckCircle } from '../node_modules/react-icons/fi'
+import { RiDeleteBin6Line } from '../node_modules/react-icons/ri'
+
+
 
 function TodoItem(props) {
   return (
-    <li className="TodoItem">
-      <span className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}>
-        <img src={checklogo} alt='Check Icon' className='checklogo'></img>
+    <li className={`TodoItem ${props.completed ? "completed" : ""}`}>
+      <span
+        className={`Icon Icon-check ${props.completed  ? "disabled Icon-check--active" : ""}`}
+        onClick={props.onCompleted}
+      >
+        <FiCheckCircle />
       </span>
       <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
         {props.text}
       </p>
-      <span className="Icon Icon-delete">
-        <img src={ closelogo } alt='closelogo' className='closelogo'></img>
+      <span className="Icon Icon-delete" onClick={
+        props.onDeleted}>
+        <RiDeleteBin6Line />
       </span>
     </li>
   );

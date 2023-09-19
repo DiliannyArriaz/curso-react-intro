@@ -6,10 +6,10 @@ import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
 
 const defaultTodos = [
-  { text: 'Cortar cebolla', completed: true },
+  { text: 'Cortar cebolla', completed: false },
   { text: 'Tomar el Curso de Intro a React.js', completed: false },
   { text: 'Llorar con la Llorona', completed: false },
-  { text: 'LALALALALA', completed: true },
+  { text: 'LALALALALA', completed: false },
   { text: 'Usar estados derivados', completed: true },
 ];
 
@@ -30,8 +30,24 @@ function App() {
     }
   );
 
-  console.log('Los usuarios buscan todos de ' + searchValue);
+  const completeTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text === text
+    )
+    newTodos[todoIndex].completed = true;
+    setTodos(newTodos); // TODO: implement this function!
+  }
   
+  const deleteTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text === text
+    );
+    newTodos.splice(todoIndex, 1);
+    setTodos(newTodos)
+  }
+
   return (
     <>
       <TodoCounter
@@ -49,6 +65,8 @@ function App() {
             key={todo.text}
             text={todo.text}
             completed={todo.completed}
+            onCompleted={()=> completeTodo(todo.text)}
+            onDeleted = {()=> deleteTodo(todo.text)}
           />
         ))}
       </TodoList>

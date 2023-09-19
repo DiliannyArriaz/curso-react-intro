@@ -42,12 +42,25 @@
   transition: background-color 0.2s;
 }
 
+.Icon-check.disabled:hover {
+  background-color: #30426b;
+}
+
 .Icon-check:hover {
   background-color: #81cab3;
 }
 
+.TodoItem.completed {
+  background-color: rgba(160, 160, 160, 0.527);
+  animation: completedAnimation 0.3s ease-in-out;
+}
+
+.TodoItem.deleted {
+  animation: completedAnimation 0.3s ease-in-out;
+}
 .Icon-check--active {
-  color: #4caf50;
+  color: #7dff81;
+
 }
 
 .Icon-delete {
@@ -71,4 +84,19 @@
 .closelogo {
   width: 30px;
   filter: invert(100%);
+}
+
+@keyframes completedAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
